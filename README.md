@@ -7,6 +7,7 @@ A high-performance Model Context Protocol (MCP) server providing local speech-to
 - **🏠 100% Local Processing**: No cloud APIs, complete privacy
 - **🚀 Apple Silicon Optimized**: 15x+ real-time transcription speed
 - **🎤 Speaker Diarization**: Identify and separate multiple speakers
+- **🎵 Universal Audio Support**: Automatic conversion from MP3, M4A, FLAC, and more
 - **📝 Multiple Output Formats**: txt, json, vtt, srt, csv
 - **💾 Low Memory Footprint**: <2GB memory usage
 - **🔧 TypeScript**: Full type safety and modern development
@@ -17,7 +18,15 @@ A high-performance Model Context Protocol (MCP) server providing local speech-to
 
 - Node.js 18+
 - whisper.cpp (`brew install whisper-cpp`)
+- **For audio format conversion**: ffmpeg (`brew install ffmpeg`) - automatically handles MP3, M4A, FLAC, OGG, etc.
 - **For speaker diarization**: Python 3.8+ and HuggingFace token (free)
+
+### Supported Audio Formats
+
+- **Native whisper.cpp formats**: WAV, FLAC
+- **Auto-converted formats**: MP3, M4A, AAC, OGG, WMA, and more
+- **Automatic conversion**: Powered by ffmpeg with 16kHz/mono optimization for whisper.cpp
+- **Format detection**: Automatic format detection and conversion when needed
 
 ### Installation
 
@@ -55,9 +64,9 @@ Add to your MCP client configuration:
 
 | Tool | Description |
 |------|-------------|
-| `transcribe` | Basic audio transcription |
-| `transcribe_long` | Long audio file processing with chunking |
-| `transcribe_with_speakers` | Speaker diarization and transcription |
+| `transcribe` | Basic audio transcription with automatic format conversion |
+| `transcribe_long` | Long audio file processing with chunking and format conversion |
+| `transcribe_with_speakers` | Speaker diarization and transcription with format support |
 | `list_models` | Show available whisper models |
 | `health_check` | System diagnostics |
 | `version` | Server version information |
