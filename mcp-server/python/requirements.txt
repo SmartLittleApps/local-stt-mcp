@@ -1,0 +1,6 @@
+torch>=2.0.0
+torchaudio>=2.0.0
+pyannote.audio>=3.1.0
+numpy>=1.21.0
+scipy>=1.7.0
+soundfile>=0.12.0

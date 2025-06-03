@@ -1,0 +1,150 @@
+# Dependencies
+node_modules/
+mcp-server/node_modules/
+*/node_modules/
+
+# Build outputs
+mcp-server/dist/
+dist/
+build/
+*.tsbuildinfo
+
+# Runtime files
+temp/
+output/
+models/
+tmp/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+config.json
+secrets.json
+
+# API Keys and tokens (belt and braces)
+*token*
+*secret*
+*key*
+*credential*
+hf_*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+
+# Private development files
+LLM-*/
+CLAUDE.md
+benchmarks/whisperx-env/
+benchmarks/*_env/
+benchmarks/whisperx-*/
+*-private/
+*-dev/
+*_private/
+*_dev/
+
+# Audio files (except approved samples)
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.aac
+*.wma
+*.aiff
+*.au
+*.ra
+# Allow only specific sample files
+!input/sample_*.wav
+!input/sample_*.mp3
+!input/test_*.wav
+
+# Video files (just in case)
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mkv
+
+# Archives that might contain sensitive data
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+!models/*.zip
+!models/*.tar.gz
+
+# Backup files
+*.bak
+*.backup
+*.orig
+*.save
+*~
+
+# Personal/private content patterns (customize for your use case)
+*private*
+*confidential*
+*personal*
+*meeting*
+*call*
+*conversation*
+# Allow approved sample files
+!input/sample_*
+!benchmarks/*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache files
+.cache/
+*.cache
+.npm/
+.yarn/
