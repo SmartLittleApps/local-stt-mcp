@@ -148,3 +148,7 @@ benchmarks/whisperx-*/
 *.cache
 .npm/
 .yarn/
+
+#LLM
+.claude
+CLAUDE.md 
